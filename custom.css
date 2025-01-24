@@ -1,0 +1,56 @@
+@font-face {
+    font-family: unifont;
+    src: url(./fonts/unifont-16.0.02.otf);
+}
+@font-face {
+    font-family: unifont-jp;
+    src: url(./fonts/unifont_jp-16.0.02.otf);
+}
+@font-face {
+    font-family: unifont-upper;
+    src: url(./fonts/unifont_upper-16.0.02.otf);
+}
+@font-face {
+    font-family: unifont-csur;
+    src: url(./fonts/unifont_csur-16.0.02.otf);
+}
+div {
+    inset-block: true;
+}
+.context {
+    p {
+        font-family: unifont-jp;
+        font-size: 20px;
+        line-height: 0.5;
+        font-variant-emoji: text;
+    }
+}
+.context-en {
+    p {
+        font-family: unifont;
+    }
+}
+
+.canvas {
+    display: flex;
+}
+.color-palette {
+    position: fixed;
+    /* ドラッグ中のスタイル */
+    transition: opacity 0.3s ease-in-out; /* 透明度の変化をスムーズに */
+}
+.color-palette:active {
+    opacity: 0.5; /* 透明度を50%に */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* 枠を追加 */
+}
+.color-palette canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.download {
+    display: flex; /* Flexboxを使用する場合 */
+    font-family: unifont-jp;
+    margin: 0;
+    padding: 0;
+}
